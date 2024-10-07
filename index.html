@@ -1,1 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Site made with Mobirise Website Builder v4.7.8, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.7.8, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo4.png" type="image/x-icon">
+  <meta name="description" content="">
+  <title>Home</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
 
+  
+  <style>
+    /* Stile per comprimere il body quando il menu è aperto */
+/* Stile per comprimere il body quando il menu è aperto */
+.body-compressed {
+    margin-left: 250px; /* Sposta il contenuto a destra di 250px (larghezza del menu) */
+    transition: margin-left 0.3s ease; /* Aggiunge un'animazione per una transizione fluida */
+}
+
+.custom-section {
+    background-color: #222; /* Cambia questo con il colore di sfondo desiderato */
+    color: #ffffff; /* Cambia questo con il colore del testo desiderato */
+    padding: 50px 0; /* Aggiungi un po' di padding per dare spazio */
+}
+.line {
+    background-color: #ffffff; /* Colore delle linee orizzontali */
+}
+
+    /* Stile per il colore di sfondo dei caroselli */
+    .carousel-bg {
+      background-color: #000000; /* Cambia qui il colore */
+      padding: 20px; /* Aggiungi un padding se necessario */
+    }
+
+    /* Stile per la barra laterale */
+    .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #151515;
+            padding-top: 20px;
+            color: #fff;
+            z-index: 1000;
+        }
+
+        .sidebar a, .sidebar button {
+            display: block;
+            padding: 10px;
+            color: white; /* Colore del testo */
+            text-decoration: none;
+            font-size: 16px;
+            margin-left: 20px; /* Allineamento */
+            border: none; /* Rimuove il bordo del pulsante */
+            background-color: #151515; /* Colore di sfondo del pulsante */
+            text-align: left; /* Allinea il testo a sinistra */
+        }
+
+        .sidebar button {
+            cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+        }
+
+        .sidebar button:hover {
+            background-color: #444; /* Colore di sfondo al passaggio del mouse */
+        }
+
+        
+
+        .toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px; /* Allinea a sinistra */
+    z-index: 1001;
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    width: 15px; /* Modifica la larghezza dell'immagine se necessario */
+    height: 20px; /* Modifica l'altezza dell'immagine se necessario */
+}
+
+
+.footer-basic {
+    background-color: #282c34; /* Change this to your desired background color */
+    padding: 20px 0;
+    text-align: center; /* Center-align the text */
+}
+
+.footer-content {
+    max-width: 800px; /* Optional: limit the width of the footer content */
+    margin: 0 auto; /* Center the content */
+}
+
+.explore-title {
+    color: #ffffff; /* Change text color */
+    margin-bottom: 20px; /* Increased space between title and links */
+    font-size: 0.8em; /* Decreased font size */
+}
+
+.social-icons {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items */
+    flex-wrap: wrap; /* Wrap items if necessary */
+}
+
+.social-icons a {
+    color: #ffffff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 15px; /* Space between links */
+}
+
+.social-icons a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+    /* Stile per nascondere il menu */
+    .hidden {
+      display: none;
+    }
+
+    /* Modifiche generali per il titolo */
+.mbr-section .title h2 {
+    margin-bottom: 10px; /* Riduce lo spazio sotto il titolo */
+}
+
+.mbr-section .title h3 {
+    margin-bottom: 5px; /* Riduce lo spazio sotto il sottotitolo */
+}
+
+.mbr-section .title p {
+    margin-top: -100px; /* Riduce lo spazio sopra il paragrafo */
+    margin-bottom: 0; /* Rimuove lo spazio sotto il paragrafo */
+}
+
+/* Centrare i testi, se necessario */
+.align-center {
+    text-align: center; /* Assicurati che i testi siano centrati */
+}
+.background-image {
+    background-image: url('path/to/your/image.jpg'); /* Cambia il percorso con il tuo */
+    background-size: cover; /* Assicura che l'immagine copra l'intera sezione */
+    background-position: center; /* Centra l'immagine */
+    height: 100vh; /* Imposta l'altezza della sezione */
+}
+
+
+
+  </style>
+  
+</head>
+<body>
+
+    <img class="toggle-btn" id="toggle-btn" src="assets/images/List.png" alt="Toggle Menu">
+
+  
+    <div class="sidebar" id="sidebar">
+        <h2>ㅤIndice</h2>
+        <a href="#content5-9">| Home</a>
+        <a href="#header3-1">| About Me</a>
+        <a href="#content10-3">| Games</a>
+        <a href="#content10-5">| Digital Art</a>
+        <a href="#content10-6">| Explore</a>
+        <button id="close-sidebar-btn">| Chiudi Menu</button>
+        
+        <!-- Aggiungi qui il collegamento alla tua email -->
+        <div class="email-contact" style="margin-top: 610px; margin-bottom: 200px;"> <!-- Modifica il valore di margin-top -->
+            <p style="text-align: left;">
+                ㅤ| Contattami: <span style="font-size: 0.65em;">
+                    <a href="mailto:andreagraziano.g33personale@gmail.com" style="font-size: inherit;">andreagraziano.g33personale@gmail.com</a>
+                    </span>
+            </p>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+
+    <section class="mbr-section content5 cid-uqxIBerMfo" id="content5-9" style="background-image: url('assets/images/bg.gif'); background-size: cover; background-position: center; height: 100vh;">
+        <div class="container">
+            <div class="media-container-row">
+                <div class="title col-12 col-md-8">
+                    <h2 class="align-center mbr-bold mbr-white pb-3 mbr-fonts-style display-1">
+                        Andrea Graziano Gitto<br>
+                    </h2>
+                    <h3 class="mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style display-5" style="font-size: 1em;"> <!-- Adjusted font size -->
+                        <strong><em>&nbsp;indie developer e digital artist</em></strong><br>
+                        <strong><em><br></em></strong><br><br><br><strong><em><br></em></strong>
+                    </h3>
+                    <p class="mbr-text align-center mbr-white pb-3 mbr-fonts-style display-7">
+                        <strong><em>&nbsp;</em></strong> <!-- Removed the dot -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+  <section class="engine"><a href="https://mobirise.me/g">how to build a site for free</a></section>
+  <section class="header3 cid-uqxDbJYgz5" id="header3-1">
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-figure" style="width: 100%;">
+                <img src="assets/images/immagine cv.jpeg" alt="Mobirise" title="">
+            </div>
+
+            <div class="media-content">
+                <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-1">
+                    About me
+                </h1>
+                
+                <div class="mbr-section-text mbr-white pb-3 ">
+                    <p class="mbr-text mbr-fonts-style display-5">
+                        <em>
+                            I am a 19-year-old Indie Game Developer from Italy, currently studying at H-Farm College in Roncade (VE), a passionate student and developer. With advanced English proficiency (C1 IELTS) and a solid foundation in programming languages like C++ and C#, I specialize in application and game development. My creative skills extend to digital illustrations, 3D modeling, and video production, utilizing tools such as Photoshop and Blender.
+                        </em>
+                    </p>
+                </div>
+                
+                <div class="mbr-section-btn">
+                    <a class="btn btn-md btn-primary display-4" href="https://mega.nz/file/fbR3mJKL#vQIqXSDSpvon4qEoxfVm-r_U60C3TBxfU7Nc44vvPF0">Download my CV</a>
+                    <a class="btn btn-md btn-white-outline display-4" href="https://learn.microsoft.com/it-it/users/andreagrazianogitto-0316/achievements#badges-section">Badges</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="mbr-section article content10 cid-uqxE1593nK custom-section" id="content10-3">
+    <div class="container">
+        <div class="inner-container" style="width: 66%;">
+            <hr class="line" style="width: 25%;">
+            <div class="section-text align-center mbr-white mbr-fonts-style display-5">
+                Games
+            </div>
+            <hr class="line" style="width: 25%;">
+        </div>
+    </div>
+</section>
+
+
+  <section class="carousel slide cid-uqxE36Oy5x carousel-bg" data-interval="false" id="slider2-4">
+    <div class="container content-slider">
+        <div class="content-slider-wrap">
+            <div>
+                <div class="mbr-slider slide carousel" data-pause="true" data-keyboard="false" data-ride="false" data-interval="false">
+                    <ol class="carousel-indicators">
+                        <li data-app-prevent-settings="" data-target="#slider2-4" class=" active" data-slide-to="0"></li>
+                        <li data-app-prevent-settings="" data-target="#slider2-4" data-slide-to="1"></li>
+                        <li data-app-prevent-settings="" data-target="#slider2-4" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item slider-fullscreen-image active" data-bg-video-slide="false" style="background-image: url(assets/images/1.jpg);">
+                            <div class="container container-slide">
+                                <div class="image_wrapper">
+                                    <a href="https://ggd3v.itch.io/lovecraft-inspired-game-in-the-darkness" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;"></a>
+                                    <img src="assets/images/darkness.gif">
+                                    <div class="carousel-caption justify-content-center">
+                                        <div class="col-10 align-center">
+                                            <p class="lead mbr-text mbr-fonts-style display-7"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="https://www.youtube.com/watch?v=UB8PElIZ-_0" style="background-image: url(assets/images/2.jpg);">
+                            <div class="container container-slide">
+                                <div class="image_wrapper">
+                                    <a href="https://ggd3v.itch.io/dungeon-crusaders" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;"></a>
+                                    <img src="assets/images/crusader.gif">
+                                    <div class="carousel-caption justify-content-center">
+                                        <div class="col-10 align-center">
+                                            <p class="lead mbr-text mbr-fonts-style display-7"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/3.jpg);">
+                          
+                            <div class="container container-slide">
+                                <div class="image_wrapper">
+                                  
+                                    <a href="https://ggd3v.itch.io/infinitetower" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;"></a>
+                                    <img src="assets/images/infinite.gif">
+                                    <div class="carousel-caption justify-content-center">
+                                        <div class="col-10 align-center">
+                                            <p class="lead mbr-text mbr-fonts-style display-7"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" role="button" data-slide="prev" href="#slider2-4">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" role="button" data-slide="next" href="#slider2-4">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section article content10 cid-uqxE1593nK custom-section" id="content10-5">
+        <div class="container">
+            <div class="inner-container" style="width: 66%;">
+                <hr class="line" style="width: 25%;">
+                <div class="section-text align-center mbr-white mbr-fonts-style display-5">
+                   Digital Art
+                </div>
+                <hr class="line" style="width: 25%;">
+            </div>
+        </div>
+    </section>
+    
+  
+
+<section class="carousel slide cid-uqxE36Oy5x carousel-bg" data-interval="false" id="slider2-7">
+<div class="container content-slider">
+<div class="-slider-wrap">
+    <div>
+        <div class="mbr-slider slide carousel" data-pause="true" data-keyboard="false" data-ride="false" data-interval="false">
+            <ol class="carousel-indicators">
+                <li data-app-prevent-settings="" data-target="#slider2-7" class="active" data-slide-to="0"></li>
+                <li data-app-prevent-settings="" data-target="#slider2-7" data-slide-to="1"></li>
+                <li data-app-prevent-settings="" data-target="#slider2-7" data-slide-to="2"></li>
+                <li data-app-prevent-settings="" data-target="#slider2-7" data-slide-to="3"></li>
+                <li data-app-prevent-settings="" data-target="#slider2-7" data-slide-to="4"></li>
+                <li data-app-prevent-settings="" data-target="#slider2-7" data-slide-to="5"></li>
+                <li data-app-prevent-settings="" data-target="#slider2-7" data-slide-to="6"></li>
+                <li data-app-prevent-settings="" data-target="#slider2-7" data-slide-to="7"></li>
+                <li data-app-prevent-settings="" data-target="#slider2-7" data-slide-to="8"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item slider-fullscreen-image active" data-bg-video-slide="false" style="background-image: url(assets/images/4.jpg);">
+                    <div class="container container-slide">
+                        <div class="image_wrapper">
+                            <img src="assets/images/caos.jpg">
+                            <div class="carousel-caption justify-content-center">
+                                <div class="col-10 align-center">
+                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/5.jpg);">
+                    <div class="container container-slide">
+                        <div class="image_wrapper">
+                            <img src="assets/images/cod.jpg">
+                            <div class="carousel-caption justify-content-center">
+                                <div class="col-10 align-center">
+                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/4.jpg);">
+                    <div class="container container-slide">
+                        <div class="image_wrapper">
+                            <img src="assets/images/ct.jpg">
+                            <div class="carousel-caption justify-content-center">
+                                <div class="col-10 align-center">
+                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/5.jpg);">
+                    <div class="container container-slide">
+                        <div class="image_wrapper">
+                            <img src="assets/images/dn.jpg">
+                            <div class="carousel-caption justify-content-center">
+                                <div class="col-10 align-center">
+                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/6.jpg);">
+                    <div class="container container-slide">
+                        <div class="image_wrapper">
+                            <img src="assets/images/tm.jpg">
+                            <div class="carousel-caption justify-content-center">
+                                <div class="col-10 align-center">
+                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/4.jpg);">
+                    <div class="container container-slide">
+                        <div class="image_wrapper">
+                            <img src="assets/images/ma.jpg">
+                            <div class="carousel-caption justify-content-center">
+                                <div class="col-10 align-center">
+                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/4.jpg);">
+                    <div class="container container-slide">
+                        <div class="image_wrapper">
+                            <img src="assets/images/ssr.jpg">
+                            <div class="carousel-caption justify-content-center">
+                                <div class="col-10 align-center">
+                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/5.jpg);">
+                    <div class="container container-slide">
+                        <div class="image_wrapper">
+                            <img src="assets/images/ez.jpg">
+                            <div class="carousel-caption justify-content-center">
+                                <div class="col-10 align-center">
+                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/6.jpg);">
+                    <div class="container container-slide">
+                        <div class="image_wrapper">
+                            <img src="assets/images/pkm.jpg">
+                            <div class="carousel-caption justify-content-center">
+                                <div class="col-10 align-center">
+                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" role="button" data-slide="prev" href="#slider2-7">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" role="button" data-slide="next" href="#slider2-7">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    
+    </div>
+</div>
+</div>
+<section class="mbr-section article content10 cid-uqxE1593nK custom-section" id="content10-6">
+
+
+    <footer class="footer-basic">
+        <div class="footer-content">
+            <h3 class="explore-title">|  Explore  |</h3>
+            <div class="social-icons">
+                <a href="https://ggd3v.itch.io" target="_blank">Itch.io</a>
+                <a href="https://leetcode.com/u/AndreaGitto/" target="_blank">LeetCode</a>
+                <a href="https://github.com/Andrea-Graziano-Gitto" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+    
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script>
+    // Funzione per gestire l'apertura e la chiusura del menu
+   // Funzione per gestire l'apertura e la chiusura del menu
+   // Funzione per gestire l'apertura e la chiusura del menu
+// Funzione per gestire l'apertura e la chiusura del menu
+// Funzione per gestire l'apertura e la chiusura del menu
+// Funzione per gestire l'apertura e la chiusura del menu
+const toggleBtn = document.getElementById('toggle-btn');
+const sidebar = document.getElementById('sidebar');
+const closeSidebarBtn = document.getElementById('close-sidebar-btn');
+const body = document.body;
+
+// Mostra il pulsante Toggle Menu
+toggleBtn.style.display = 'none';
+
+// Imposta inizialmente il menu come aperto e comprime il body
+sidebar.classList.remove('hidden'); // Assicurati che il menu sia visibile
+body.classList.add('body-compressed'); // Aggiungi la classe per comprimere il body
+
+toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('hidden');
+
+    // Se la sidebar è visibile, aggiungi la classe per comprimere il body
+    if (!sidebar.classList.contains('hidden')) {
+        toggleBtn.style.display = 'none';
+        body.classList.add('body-compressed'); // Aggiungi la classe per spostare il body
+    } else {
+        toggleBtn.style.display = 'block'; // Mostra il pulsante se la sidebar è chiusa
+        body.classList.remove('body-compressed'); // Rimuovi la classe per ripristinare il body
+    }
+});
+
+// Funzione per chiudere la sidebar
+closeSidebarBtn.addEventListener('click', () => {
+    sidebar.classList.add('hidden'); // Nasconde la sidebar
+    toggleBtn.style.display = 'block'; // Mostra il pulsante Toggle Menu
+    body.classList.remove('body-compressed'); // Rimuovi la classe per ripristinare il body
+});
+
+
+
+  </script>
+</body>
+</html>
