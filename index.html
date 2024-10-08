@@ -19,6 +19,15 @@
 
   
   <style>
+
+
+/* Force desktop styles */
+@media only screen and (max-width: 768px) {
+            body.force-desktop-mode {
+                /* Styles to mimic desktop layout */
+            }
+        }
+        
     /* Stile per comprimere il body quando il menu è aperto */
 /* Stile per comprimere il body quando il menu è aperto */
 .body-compressed {
@@ -28,18 +37,78 @@
 
 .custom-section {
     background-color: #222; /* Cambia questo con il colore di sfondo desiderato */
-    color: #ffffff; /* Cambia questo con il colore del testo desiderato */
-    padding: 50px 0; /* Aggiungi un po' di padding per dare spazio */
+    color: #000000; /* Cambia questo con il colore del testo desiderato */
+    padding: 0px 0; /* Aggiungi un po' di padding per dare spazio */
 }
 .line {
     background-color: #ffffff; /* Colore delle linee orizzontali */
 }
 
-    /* Stile per il colore di sfondo dei caroselli */
-    .carousel-bg {
-      background-color: #000000; /* Cambia qui il colore */
-      padding: 20px; /* Aggiungi un padding se necessario */
-    }
+
+/* Container for the carousel */
+.carousel-container {
+    width: 1000px; /* Set the width of the carousel */
+    height: 700px; /* Set the desired fixed height for the carousel */
+    margin: 0 auto; /* Center the carousel container */
+    position: relative; /* Keep relative positioning */
+    background-color: #000000; /* Background color */
+    overflow: hidden; /* Hide overflow to prevent image overflow */
+    border-radius: 10px; /* Rounded corners */
+    
+}
+
+/* Container for the slides */
+.carousel-slide {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+    height: 100%; /* Maintain height */
+    position: relative; /* For absolute positioning of images */
+}
+
+/* Styles for the images */
+.carousel-slide img {
+    height: 100%; /* Fill the container height */
+    width: auto; /* Maintain original width */
+    opacity: 0; /* Start with all images invisible */
+    transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
+    position: absolute; /* Position images absolutely within the container */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    object-fit: contain; /* Maintain aspect ratio, scaling image as needed */
+}
+
+.carousel-slide img.active {
+    opacity: 1; /* Show the active image */
+}
+
+
+
+
+/* Navigation buttons */
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px; /* Adjust padding if needed */
+    color: white; /* Arrow color */
+    font-size: 24px; /* Increase the font size for better visibility */
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove any border */
+    z-index: 1; /* Ensure buttons are above other elements */
+}
+
+.prev {
+    left: 10px; /* Positioning */
+}
+
+.next {
+    right: 10px; /* Positioning */
+}
+
 
     /* Stile per la barra laterale */
     .sidebar {
@@ -88,7 +157,7 @@
 
 
 .footer-basic {
-    background-color: #282c34; /* Change this to your desired background color */
+    background-color: #222; /* Change this to your desired background color */
     padding: 20px 0;
     text-align: center; /* Center-align the text */
 }
@@ -168,12 +237,14 @@
         <a href="#content10-3">| Games</a>
         <a href="#content10-5">| Digital Art</a>
         <a href="#content10-6">| Explore</a>
+        
         <button id="close-sidebar-btn">| Chiudi Menu</button>
+        <a>| Contattami</a>
         
         <!-- Aggiungi qui il collegamento alla tua email -->
-        <div class="email-contact" style="margin-top: 610px; margin-bottom: 200px;"> <!-- Modifica il valore di margin-top -->
+        <div class="email-contact" style="margin-top: px; margin-bottom: 200px;"> <!-- Modifica il valore di margin-top -->
             <p style="text-align: left;">
-                ㅤ| Contattami: <span style="font-size: 0.65em;">
+                <span style="font-size: 0.65em;">
                     <a href="mailto:andreagraziano.g33personale@gmail.com" style="font-size: inherit;">andreagraziano.g33personale@gmail.com</a>
                     </span>
             </p>
@@ -240,236 +311,121 @@
   <section class="mbr-section article content10 cid-uqxE1593nK custom-section" id="content10-3">
     <div class="container">
         <div class="inner-container" style="width: 66%;">
-            <hr class="line" style="width: 25%;">
+            <hr class="line" style="width: 0%;">
             <div class="section-text align-center mbr-white mbr-fonts-style display-5">
                 Games
             </div>
-            <hr class="line" style="width: 25%;">
+            <hr class="line" style="width: 0%;">
         </div>
     </div>
 </section>
 
-
-  <section class="carousel slide cid-uqxE36Oy5x carousel-bg" data-interval="false" id="slider2-4">
-    <div class="container content-slider">
-        <div class="content-slider-wrap">
-            <div>
-                <div class="mbr-slider slide carousel" data-pause="true" data-keyboard="false" data-ride="false" data-interval="false">
-                    <ol class="carousel-indicators">
-                        <li data-app-prevent-settings="" data-target="#slider2-4" class=" active" data-slide-to="0"></li>
-                        <li data-app-prevent-settings="" data-target="#slider2-4" data-slide-to="1"></li>
-                        <li data-app-prevent-settings="" data-target="#slider2-4" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item slider-fullscreen-image active" data-bg-video-slide="false" style="background-image: url(assets/images/1.jpg);">
-                            <div class="container container-slide">
-                                <div class="image_wrapper">
-                                    <a href="https://ggd3v.itch.io/lovecraft-inspired-game-in-the-darkness" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;"></a>
-                                    <img src="assets/images/darkness.gif">
-                                    <div class="carousel-caption justify-content-center">
-                                        <div class="col-10 align-center">
-                                            <p class="lead mbr-text mbr-fonts-style display-7"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="https://www.youtube.com/watch?v=UB8PElIZ-_0" style="background-image: url(assets/images/2.jpg);">
-                            <div class="container container-slide">
-                                <div class="image_wrapper">
-                                    <a href="https://ggd3v.itch.io/dungeon-crusaders" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;"></a>
-                                    <img src="assets/images/crusader.gif">
-                                    <div class="carousel-caption justify-content-center">
-                                        <div class="col-10 align-center">
-                                            <p class="lead mbr-text mbr-fonts-style display-7"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/3.jpg);">
-                          
-                            <div class="container container-slide">
-                                <div class="image_wrapper">
-                                  
-                                    <a href="https://ggd3v.itch.io/infinitetower" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;"></a>
-                                    <img src="assets/images/infinite.gif">
-                                    <div class="carousel-caption justify-content-center">
-                                        <div class="col-10 align-center">
-                                            <p class="lead mbr-text mbr-fonts-style display-7"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" role="button" data-slide="prev" href="#slider2-4">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" role="button" data-slide="next" href="#slider2-4">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="mbr-section article content10 cid-uqxE1593nK custom-section" id="content10-5">
-        <div class="container">
-            <div class="inner-container" style="width: 66%;">
-                <hr class="line" style="width: 25%;">
-                <div class="section-text align-center mbr-white mbr-fonts-style display-5">
-                   Digital Art
-                </div>
-                <hr class="line" style="width: 25%;">
-            </div>
-        </div>
-    </section>
-    
   
 
-<section class="carousel slide cid-uqxE36Oy5x carousel-bg" data-interval="false" id="slider2-7">
-<div class="container content-slider">
-<div class="-slider-wrap">
-    <div>
-        <div class="mbr-slider slide carousel" data-pause="true" data-keyboard="false" data-ride="false" data-interval="false">
-            <ol class="carousel-indicators">
-                <li data-app-prevent-settings="" data-target="#slider2-7" class="active" data-slide-to="0"></li>
-                <li data-app-prevent-settings="" data-target="#slider2-7" data-slide-to="1"></li>
-                <li data-app-prevent-settings="" data-target="#slider2-7" data-slide-to="2"></li>
-                <li data-app-prevent-settings="" data-target="#slider2-7" data-slide-to="3"></li>
-                <li data-app-prevent-settings="" data-target="#slider2-7" data-slide-to="4"></li>
-                <li data-app-prevent-settings="" data-target="#slider2-7" data-slide-to="5"></li>
-                <li data-app-prevent-settings="" data-target="#slider2-7" data-slide-to="6"></li>
-                <li data-app-prevent-settings="" data-target="#slider2-7" data-slide-to="7"></li>
-                <li data-app-prevent-settings="" data-target="#slider2-7" data-slide-to="8"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item slider-fullscreen-image active" data-bg-video-slide="false" style="background-image: url(assets/images/4.jpg);">
-                    <div class="container container-slide">
-                        <div class="image_wrapper">
-                            <img src="assets/images/caos.jpg">
-                            <div class="carousel-caption justify-content-center">
-                                <div class="col-10 align-center">
-                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/5.jpg);">
-                    <div class="container container-slide">
-                        <div class="image_wrapper">
-                            <img src="assets/images/cod.jpg">
-                            <div class="carousel-caption justify-content-center">
-                                <div class="col-10 align-center">
-                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/4.jpg);">
-                    <div class="container container-slide">
-                        <div class="image_wrapper">
-                            <img src="assets/images/ct.jpg">
-                            <div class="carousel-caption justify-content-center">
-                                <div class="col-10 align-center">
-                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/5.jpg);">
-                    <div class="container container-slide">
-                        <div class="image_wrapper">
-                            <img src="assets/images/dn.jpg">
-                            <div class="carousel-caption justify-content-center">
-                                <div class="col-10 align-center">
-                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/6.jpg);">
-                    <div class="container container-slide">
-                        <div class="image_wrapper">
-                            <img src="assets/images/tm.jpg">
-                            <div class="carousel-caption justify-content-center">
-                                <div class="col-10 align-center">
-                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/4.jpg);">
-                    <div class="container container-slide">
-                        <div class="image_wrapper">
-                            <img src="assets/images/ma.jpg">
-                            <div class="carousel-caption justify-content-center">
-                                <div class="col-10 align-center">
-                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/4.jpg);">
-                    <div class="container container-slide">
-                        <div class="image_wrapper">
-                            <img src="assets/images/ssr.jpg">
-                            <div class="carousel-caption justify-content-center">
-                                <div class="col-10 align-center">
-                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/5.jpg);">
-                    <div class="container container-slide">
-                        <div class="image_wrapper">
-                            <img src="assets/images/ez.jpg">
-                            <div class="carousel-caption justify-content-center">
-                                <div class="col-10 align-center">
-                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/6.jpg);">
-                    <div class="container container-slide">
-                        <div class="image_wrapper">
-                            <img src="assets/images/pkm.jpg">
-                            <div class="carousel-caption justify-content-center">
-                                <div class="col-10 align-center">
-                                    <p class="lead mbr-text mbr-fonts-style display-7"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- First Carousel -->
+<section class="carousel slide carousel-bg" id="carousel1" data-interval="false">
+    <div class="carousel-container">
+        <div class="carousel-slide" id="slide1">
+            <img src="assets/images/drkn.gif" alt="Image 1" data-link="https://ggd3v.itch.io/lovecraft-inspired-game-in-the-darkness">
+            <img src="assets/images/crsdr.gif" alt="Image 2" data-link="https://ggd3v.itch.io/dungeon-crusaders">
+            <img src="assets/images/infinite.gif" alt="Image 3" data-link="https://ggd3v.itch.io/infinitetower">
+        </div>
+        <button class="prev" onclick="moveSlide(-1, 'slide1')">&#10094;</button>
+        <button class="next" onclick="moveSlide(1, 'slide1')">&#10095;</button>
+    </div>
+</section>
+
+
+
+<section class="mbr-section article content10 cid-uqxE1593nK custom-section" id="content10-5">
+    <div class="container">
+        <div class="inner-container" style="width: 66%;">
+            <hr class="line" style="width: 0%;">
+            <div class="section-text align-center mbr-white mbr-fonts-style display-5">
+               Digital Art
             </div>
-            <a class="carousel-control-prev" role="button" data-slide="prev" href="#slider2-7">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" role="button" data-slide="next" href="#slider2-7">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <hr class="line" style="width: 0%;">
         </div>
     </div>
-    
+</section>
+
+<!-- Second Carousel -->
+<section class="carousel slide carousel-bg" id="carousel2" data-interval="false">
+    <div class="carousel-container">
+        <div class="carousel-slide" id="slide2">
+            <img src="assets/images/caos.jpg" alt="Image 1">
+            <img src="assets/images/cod.jpg" alt="Image 2">
+            <img src="assets/images/ct.jpg" alt="Image 3">
+            <img src="assets/images/dn.jpg" alt="Image 1">
+            <img src="assets/images/tm.jpg" alt="Image 2">
+            <img src="assets/images/ma.jpg" alt="Image 3">
+            <img src="assets/images/ssr.jpg" alt="Image 1">
+            <img src="assets/images/ez.jpg" alt="Image 2">
+            <img src="assets/images/pkm.jpg" alt="Image 3">
+        </div>
+        <button class="prev" onclick="moveSlide(-1, 'slide2')">&#10094;</button>
+        <button class="next" onclick="moveSlide(1, 'slide2')">&#10095;</button>
     </div>
-</div>
-</div>
+</section>
+
+
+<script>
+    const slides = {
+        slide1: document.querySelectorAll('#slide1 img'),
+        slide2: document.querySelectorAll('#slide2 img')
+    };
+    
+    const currentSlides = {
+        slide1: 0,
+        slide2: 0
+    };
+    
+    function showSlide(slideId, index) {
+        const slideImages = slides[slideId];
+    
+        if (index >= slideImages.length) {
+            currentSlides[slideId] = 0; // Reset to first slide
+        } else if (index < 0) {
+            currentSlides[slideId] = slideImages.length - 1; // Last slide
+        } else {
+            currentSlides[slideId] = index; // Update current index
+        }
+    
+        slideImages.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === currentSlides[slideId]) {
+                slide.classList.add('active');
+            }
+        });
+    }
+    
+    // Handle click on carousel container
+    document.querySelector('.carousel-container').addEventListener('click', function() {
+        const activeImage = slides['slide1'][currentSlides.slide1];
+        const link = activeImage.getAttribute('data-link'); // Get link from data attribute
+        window.open(link, '_blank'); // Open link in new tab
+    });
+    
+    function moveSlide(direction, slideId) {
+        showSlide(slideId, currentSlides[slideId] + direction);
+    }
+    
+    // Show the first slide on startup
+    showSlide('slide1', currentSlides.slide1);
+    showSlide('slide2', currentSlides.slide2);
+    
+    // Prevent clicks on navigation buttons from propagating to container
+    document.querySelectorAll('.prev, .next').forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent click from bubbling up to carousel container
+        });
+    });
+    </script>
+
+
+
+
+
 <section class="mbr-section article content10 cid-uqxE1593nK custom-section" id="content10-6">
 
 
