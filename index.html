@@ -27,13 +27,16 @@
                 /* Styles to mimic desktop layout */
             }
         }
-        
+
     /* Stile per comprimere il body quando il menu è aperto */
 /* Stile per comprimere il body quando il menu è aperto */
+/* Modifiche alla classe body-compressed */
 .body-compressed {
     margin-left: 250px; /* Sposta il contenuto a destra di 250px (larghezza del menu) */
     transition: margin-left 0.3s ease; /* Aggiunge un'animazione per una transizione fluida */
 }
+
+
 
 .custom-section {
     background-color: #222; /* Cambia questo con il colore di sfondo desiderato */
@@ -47,15 +50,25 @@
 
 /* Container for the carousel */
 .carousel-container {
-    width: 1000px; /* Set the width of the carousel */
-    height: 700px; /* Set the desired fixed height for the carousel */
-    margin: 0 auto; /* Center the carousel container */
-    position: relative; /* Keep relative positioning */
-    background-color: #000000; /* Background color */
-    overflow: hidden; /* Hide overflow to prevent image overflow */
-    border-radius: 10px; /* Rounded corners */
-    
-}
+        width: calc(100% - 250px); /* Adatta la larghezza */
+        height: 700px; 
+        margin: 0 auto; 
+        position: relative; 
+        background-color: #000000; 
+        overflow: hidden; 
+        border-radius: 10px; 
+    }
+
+    @media (max-width: 768px) {
+        .carousel-container {
+            width: 100%; /* Larghezza piena su schermi piccoli */
+        }
+
+        .body-compressed {
+            margin-left: 0; /* Nessun margine su schermi piccoli */
+        }
+    }
+
 
 /* Container for the slides */
 .carousel-slide {
