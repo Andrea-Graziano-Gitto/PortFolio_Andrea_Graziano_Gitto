@@ -1,258 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
+
 <head>
-  <!-- Site made with Mobirise Website Builder v4.7.8, https://mobirise.com -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v4.7.8, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/logo4.png" type="image/x-icon">
-  <meta name="description" content="">
-  <title>Home</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
-  <link rel="stylesheet" href="assets/tether/tether.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-
-  
-  <style>
-
-
-/* Force desktop styles */
-@media only screen and (max-width: 768px) {
-            body.force-desktop-mode {
-                /* Styles to mimic desktop layout */
-            }
-        }
-
-    /* Stile per comprimere il body quando il menu è aperto */
-/* Stile per comprimere il body quando il menu è aperto */
-/* Modifiche alla classe body-compressed */
-.body-compressed {
-    margin-left: 250px; /* Sposta il contenuto a destra di 250px (larghezza del menu) */
-    transition: margin-left 0.3s ease; /* Aggiunge un'animazione per una transizione fluida */
-}
-
-
-
-.custom-section {
-    background-color: #222; /* Cambia questo con il colore di sfondo desiderato */
-    color: #000000; /* Cambia questo con il colore del testo desiderato */
-    padding: 0px 0; /* Aggiungi un po' di padding per dare spazio */
-}
-.line {
-    background-color: #ffffff; /* Colore delle linee orizzontali */
-}
-
-
-/* Container for the carousel */
-.carousel-container {
-        width: calc(100% - 250px); /* Adatta la larghezza */
-        height: 700px; 
-        margin: 0 auto; 
-        position: relative; 
-        background-color: #000000; 
-        overflow: hidden; 
-        border-radius: 10px; 
-    }
-
-    @media (max-width: 768px) {
-        .carousel-container {
-            width: 100%; /* Larghezza piena su schermi piccoli */
-        }
-
-        .body-compressed {
-            margin-left: 0; /* Nessun margine su schermi piccoli */
-        }
-    }
-
-
-/* Container for the slides */
-.carousel-slide {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center images horizontally */
-    align-items: center; /* Center images vertically */
-    height: 100%; /* Maintain height */
-    position: relative; /* For absolute positioning of images */
-}
-
-/* Styles for the images */
-.carousel-slide img {
-    height: 100%; /* Fill the container height */
-    width: auto; /* Maintain original width */
-    opacity: 0; /* Start with all images invisible */
-    transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
-    position: absolute; /* Position images absolutely within the container */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for centering */
-    object-fit: contain; /* Maintain aspect ratio, scaling image as needed */
-}
-
-.carousel-slide img.active {
-    opacity: 1; /* Show the active image */
-}
-
-
-
-
-/* Navigation buttons */
-/* Navigation buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px; /* Adjust padding if needed */
-    color: white; /* Arrow color */
-    font-size: 24px; /* Increase the font size for better visibility */
-    background-color: transparent; /* Remove background color */
-    border: none; /* Remove any border */
-    z-index: 1; /* Ensure buttons are above other elements */
-}
-
-.prev {
-    left: 10px; /* Positioning */
-}
-
-.next {
-    right: 10px; /* Positioning */
-}
-
-
-    /* Stile per la barra laterale */
-    .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 250px;
-            background-color: #151515;
-            padding-top: 20px;
-            color: #fff;
-            z-index: 1000;
-        }
-
-        .sidebar a, .sidebar button {
-            display: block;
-            padding: 10px;
-            color: white; /* Colore del testo */
-            text-decoration: none;
-            font-size: 16px;
-            margin-left: 20px; /* Allineamento */
-            border: none; /* Rimuove il bordo del pulsante */
-            background-color: #151515; /* Colore di sfondo del pulsante */
-            text-align: left; /* Allinea il testo a sinistra */
-        }
-
-        .sidebar button {
-            cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-        }
-
-        .sidebar button:hover {
-            background-color: #444; /* Colore di sfondo al passaggio del mouse */
-        }
-
-        
-
-        /* Per il pulsante toggle su desktop */
-.toggle-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1001;
-    cursor: pointer;
-    width: 25px; /* Dimensione desktop */
-    height: 20px; /* Dimensione desktop */
-}
-
-/* Per il pulsante toggle su mobile */
-@media (max-width: 768px) {
-    .toggle-btn {
-        width: 20px; /* Dimensione mobile */
-        height: 20px; /* Dimensione mobile */
-    }
-}
-
-
-
-.footer-basic {
-    background-color: #222; /* Change this to your desired background color */
-    padding: 20px 0;
-    text-align: center; /* Center-align the text */
-}
-
-.footer-content {
-    max-width: 800px; /* Optional: limit the width of the footer content */
-    margin: 0 auto; /* Center the content */
-}
-
-.explore-title {
-    color: #ffffff; /* Change text color */
-    margin-bottom: 20px; /* Increased space between title and links */
-    font-size: 0.8em; /* Decreased font size */
-}
-
-.social-icons {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center the items */
-    flex-wrap: wrap; /* Wrap items if necessary */
-}
-
-.social-icons a {
-    color: #ffffff; /* Link color */
-    text-decoration: none; /* Remove underline from links */
-    margin: 0 15px; /* Space between links */
-}
-
-.social-icons a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-
-    /* Stile per nascondere il menu */
-    .hidden {
-      display: none;
-    }
-
-    /* Modifiche generali per il titolo */
-.mbr-section .title h2 {
-    margin-bottom: 10px; /* Riduce lo spazio sotto il titolo */
-}
-
-.mbr-section .title h3 {
-    margin-bottom: 5px; /* Riduce lo spazio sotto il sottotitolo */
-}
-
-.mbr-section .title p {
-    margin-top: -100px; /* Riduce lo spazio sopra il paragrafo */
-    margin-bottom: 0; /* Rimuove lo spazio sotto il paragrafo */
-}
-
-/* Centrare i testi, se necessario */
-.align-center {
-    text-align: center; /* Assicurati che i testi siano centrati */
-}
-.background-image {
-    background-image: url('path/to/your/image.jpg'); /* Cambia il percorso con il tuo */
-    background-size: cover; /* Assicura che l'immagine copra l'intera sezione */
-    background-position: center; /* Centra l'immagine */
-    height: 100vh; /* Imposta l'altezza della sezione */
-}
-
-
-
-  </style>
-  
+    <!-- Site made with Mobirise Website Builder v4.7.8, https://mobirise.com -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v4.7.8, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/logo4.png" type="image/x-icon">
+    <meta name="description" content="">
+    <title>Home</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+    <link rel="stylesheet" href="assets/tether/tether.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <link rel="stylesheet" href="stile.css">
 </head>
-<body>
 
+<body>
     <img class="toggle-btn" id="toggle-btn" src="assets/images/List2.png" alt="Toggle Menu">
 
-  
     <div class="sidebar" id="sidebar">
         <h2>ㅤIndice</h2>
         <a href="#content5-9">| Home</a>
@@ -265,19 +37,14 @@
         <a>| Contattami</a>
         
         <!-- Aggiungi qui il collegamento alla tua email -->
-        <div class="email-contact" style="margin-top: px; margin-bottom: 200px;"> <!-- Modifica il valore di margin-top -->
+        <div class="email-contact" style="margin-top: 0; margin-bottom: 200px;"> <!-- Modifica il valore di margin-top -->
             <p style="text-align: left;">
                 <span style="font-size: 0.65em;">
                     <a href="mailto:andreagraziano.g33personale@gmail.com" style="font-size: inherit;">andreagraziano.g33personale@gmail.com</a>
-                    </span>
+                </span>
             </p>
         </div>
     </div>
-    
-    
-    
-    
-    
 
     <section class="mbr-section content5 cid-uqxIBerMfo" id="content5-9" style="background-image: url('assets/images/bg.gif'); background-size: cover; background-position: center; height: 100vh;">
         <div class="container">
@@ -286,238 +53,168 @@
                     <h2 class="align-center mbr-bold mbr-white pb-3 mbr-fonts-style display-1">
                         Andrea Graziano Gitto<br>
                     </h2>
-                    <h3 class="mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style display-5" style="font-size: 1em;"> <!-- Adjusted font size -->
+                    <h3 class="mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style display-5" style="font-size: 1em;">
                         <strong><em>&nbsp;indie developer e digital artist</em></strong><br>
                         <strong><em><br></em></strong><br><br><br><strong><em><br></em></strong>
                     </h3>
                     <p class="mbr-text align-center mbr-white pb-3 mbr-fonts-style display-7">
-                        <strong><em>&nbsp;</em></strong> <!-- Removed the dot -->
+                        <strong><em>&nbsp;</em></strong>
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    
-    
-    
 
-  <section class="engine"><a href="https://mobirise.me/g">how to build a site for free</a></section>
-  <section class="header3 cid-uqxDbJYgz5" id="header3-1">
-    <div class="container">
-        <div class="media-container-row">
-            <div class="mbr-figure" style="width: 100%;">
-                <img src="assets/images/immagine cv.jpeg" alt="Mobirise" title="">
-            </div>
-
-            <div class="media-content">
-                <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-1">
-                    <strong>About me</strong>
-                </h1>
-                
-                
-                <div class="mbr-section-text mbr-white pb-3 ">
-                    <p class="mbr-text mbr-fonts-style display-5">
-                        <em>
-                            I am a 19-year-old Indie Game Developer from Italy, currently studying at H-Farm College in Roncade (VE), a passionate student and developer. With advanced English proficiency (C1 IELTS) and a solid foundation in programming languages like C++ and C#, I specialize in application and game development. My creative skills extend to digital illustrations, 3D modeling, and video production, utilizing tools such as Photoshop and Blender.
-                        </em>
-                    </p>
+    <section class="engine">
+        <a href="https://mobirise.me/g">how to build a site for free</a>
+    </section>
+    
+    <section class="header3 cid-uqxDbJYgz5" id="header3-1">
+        <div class="container">
+            <div class="media-container-row">
+                <div class="mbr-figure" style="width: 100%;">
+                    <img src="assets/images/immagine cv.jpeg" alt="Mobirise" title="">
                 </div>
-                
-                <div class="mbr-section-btn">
-                    <a class="btn btn-md btn-primary display-4" href="assets/CV - Andrea Graziano Gitto.pdf" download>Download my CV</a>
-
-                    <a class="btn btn-md btn-white-outline display-4" href="https://learn.microsoft.com/it-it/users/andreagrazianogitto-0316/achievements#badges-section">Badges</a>
+                <div class="media-content">
+                    <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-1">
+                        <strong>About me</strong>
+                    </h1>
+                    <div class="mbr-section-text mbr-white pb-3">
+                        <p class="mbr-text mbr-fonts-style display-5">
+                            <em>
+                                I am a 19-year-old Indie Game Developer from Italy, currently studying at H-Farm College in Roncade (VE), a passionate student and developer. With advanced English proficiency (C1 IELTS) and a solid foundation in programming languages like C++ and C#, I specialize in application and game development. My creative skills extend to digital illustrations, 3D modeling, and video production, utilizing tools such as Photoshop and Blender.
+                            </em>
+                        </p>
+                    </div>
+                    <div class="mbr-section-btn">
+                        <a class="btn btn-md btn-primary display-4" href="assets/CV - Andrea Graziano Gitto.pdf" download>Download my CV</a>
+                        <a class="btn btn-md btn-white-outline display-4" href="https://learn.microsoft.com/it-it/users/andreagrazianogitto-0316/achievements#badges-section">Badges</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="mbr-section article content10 cid-uqxE1593nK custom-section" id="content10-3">
-    <div class="container">
-        <div class="inner-container" style="width: 66%;">
-            <hr class="line" style="width: 0%;">
-            <div class="section-text align-center mbr-white mbr-fonts-style display-5">
-                Games
+    <section class="mbr-section article content10 cid-uqxE1593nK custom-section" id="content10-3">
+        <div class="container">
+            <div class="inner-container" style="width: 66%;">
+                <hr class="line" style="width: 0%;">
+                <div class="section-text align-center mbr-white mbr-fonts-style display-5">
+                    Games
+                </div>
+                <hr class="line" style="width: 0%;">
             </div>
-            <hr class="line" style="width: 0%;">
         </div>
-    </div>
-</section>
+    </section>
 
-  
-
-<!-- First Carousel -->
-<section class="carousel slide carousel-bg" id="carousel1" data-interval="false">
-    <div class="carousel-container">
-        <div class="carousel-slide" id="slide1">
-            <img src="assets/images/drkn.gif" alt="Image 1" data-link="https://ggd3v.itch.io/lovecraft-inspired-game-in-the-darkness">
-            <img src="assets/images/crsdr.gif" alt="Image 2" data-link="https://ggd3v.itch.io/dungeon-crusaders">
-            <img src="assets/images/infinite.gif" alt="Image 3" data-link="https://ggd3v.itch.io/infinitetower">
-        </div>
-        <button class="prev" onclick="moveSlide(-1, 'slide1')">&#10094;</button>
-        <button class="next" onclick="moveSlide(1, 'slide1')">&#10095;</button>
-    </div>
-</section>
-
-
-
-<section class="mbr-section article content10 cid-uqxE1593nK custom-section" id="content10-5">
-    <div class="container">
-        <div class="inner-container" style="width: 66%;">
-            <hr class="line" style="width: 0%;">
-            <div class="section-text align-center mbr-white mbr-fonts-style display-5">
-               Digital Art
+    <!-- First Carousel -->
+    <section class="carousel slide carousel-bg" id="carousel1" data-interval="false">
+        <div class="carousel-container">
+            <div class="carousel-slide" id="slide1">
+                <img src="assets/images/drkn.gif" alt="Image 1" data-link="https://ggd3v.itch.io/lovecraft-inspired-game-in-the-darkness">
+                <img src="assets/images/crsdr.gif" alt="Image 2" data-link="https://ggd3v.itch.io/dungeon-crusaders">
+                <img src="assets/images/infinite.gif" alt="Image 3" data-link="https://ggd3v.itch.io/infinitetower">
             </div>
-            <hr class="line" style="width: 0%;">
+            <button class="prev" onclick="moveSlide(-1, 'slide1')">&#10094;</button>
+            <button class="next" onclick="moveSlide(1, 'slide1')">&#10095;</button>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Second Carousel -->
-<section class="carousel slide carousel-bg" id="carousel2" data-interval="false">
-    <div class="carousel-container">
-        <div class="carousel-slide" id="slide2">
-            <img src="assets/images/caos.jpg" alt="Image 1">
-            <img src="assets/images/cod.jpg" alt="Image 2">
-            <img src="assets/images/ct.jpg" alt="Image 3">
-            <img src="assets/images/dn.jpg" alt="Image 1">
-            <img src="assets/images/tm.jpg" alt="Image 2">
-            <img src="assets/images/ma.jpg" alt="Image 3">
-            <img src="assets/images/ssr.jpg" alt="Image 1">
-            <img src="assets/images/ez.jpg" alt="Image 2">
-            <img src="assets/images/pkm.jpg" alt="Image 3">
+    <section class="mbr-section article content10 cid-uqxE1593nK custom-section" id="content10-5">
+        <div class="container">
+            <div class="inner-container" style="width: 66%;">
+                <hr class="line" style="width: 0%;">
+                <div class="section-text align-center mbr-white mbr-fonts-style display-5">
+                    Digital Art
+                </div>
+                <hr class="line" style="width: 0%;">
+            </div>
         </div>
-        <button class="prev" onclick="moveSlide(-1, 'slide2')">&#10094;</button>
-        <button class="next" onclick="moveSlide(1, 'slide2')">&#10095;</button>
-    </div>
-</section>
+    </section>
 
+    <!-- Second Carousel -->
+    <section class="carousel slide carousel-bg" id="carousel2" data-interval="false">
+        <div class="carousel-container">
+            <div class="carousel-slide" id="slide2">
+                <img src="assets/images/caos.jpg" alt="Image 1">
+                <img src="assets/images/cod.jpg" alt="Image 2">
+                <img src="assets/images/ct.jpg" alt="Image 3">
+                <img src="assets/images/dn.jpg" alt="Image 4">
+                <img src="assets/images/tm.jpg" alt="Image 5">
+                <img src="assets/images/ma.jpg" alt="Image 6">
+                <img src="assets/images/ssr.jpg" alt="Image 7">
+                <img src="assets/images/ez.jpg" alt="Image 8">
+                <img src="assets/images/pkm.jpg" alt="Image 9">
+            </div>
+            <button class="prev" onclick="moveSlide(-1, 'slide2')">&#10094;</button>
+            <button class="next" onclick="moveSlide(1, 'slide2')">&#10095;</button>
+        </div>
+    </section>
 
-<script>
-    const slides = {
-        slide1: document.querySelectorAll('#slide1 img'),
-        slide2: document.querySelectorAll('#slide2 img')
-    };
+    <section class="mbr-section article content10 cid-uqxE1593nK custom-section" id="content10-6">
+        <footer class="footer-basic">
+            <div class="footer-content">
+                <h3 class="explore-title">| Explore |</h3>
+                <div class="social-icons">
+                    <a href="https://ggd3v.itch.io" target="_blank" style="display: block; margin-bottom: 10px;">Itch.io</a>
+                    <a href="https://leetcode.com/u/AndreaGitto/" target="_blank" style="display: block; margin-bottom: 10px;">LeetCode</a>
+                    <a href="https://github.com/Andrea-Graziano-Gitto" target="_blank" style="display: block; margin-bottom: 10px;">GitHub</a>
+                </div>
+            </div>
+            <h3 class="explore-title">| version | 1.03 |</h3>
+        </footer>
+    </section>
+
+    <!-- Scripts -->
+    <script src="carosello.js"></script>
+    <script src="assets/web/assets/jquery/jquery.min.js"></script>
+    <script src="assets/tether/tether.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/smoothscroll/smooth-scroll.js"></script>
     
-    const currentSlides = {
-        slide1: 0,
-        slide2: 0
-    };
-    
-    function showSlide(slideId, index) {
-        const slideImages = slides[slideId];
-    
-        if (index >= slideImages.length) {
-            currentSlides[slideId] = 0; // Reset to first slide
-        } else if (index < 0) {
-            currentSlides[slideId] = slideImages.length - 1; // Last slide
-        } else {
-            currentSlides[slideId] = index; // Update current index
+    <script>
+        // Funzione per gestire l'apertura e la chiusura del menu
+        const toggleBtn = document.getElementById('toggle-btn');
+        const sidebar = document.getElementById('sidebar');
+        const closeSidebarBtn = document.getElementById('close-sidebar-btn');
+        const body = document.body;
+
+        // Funzione per controllare se lo schermo è mobile
+        function isMobile() {
+            return window.innerWidth <= 768;
         }
-    
-        slideImages.forEach((slide, i) => {
-            slide.classList.remove('active');
-            if (i === currentSlides[slideId]) {
-                slide.classList.add('active');
+
+        // Imposta lo stato iniziale del menu
+        if (isMobile()) {
+            sidebar.classList.add('hidden'); // Chiudi il menu su mobile
+            toggleBtn.style.display = 'block'; // Mostra il pulsante su mobile
+            body.classList.remove('body-compressed'); // Non comprimere il body su mobile
+        } else {
+            sidebar.classList.remove('hidden'); // Mantieni il menu aperto su desktop
+            toggleBtn.style.display = 'none'; // Nascondi il pulsante su desktop
+            body.classList.add('body-compressed'); // Comprimi il body su desktop
+        }
+
+        // Aggiungi l'evento click al pulsante toggle
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('hidden');
+
+            if (!sidebar.classList.contains('hidden')) {
+                toggleBtn.style.display = 'none'; // Nascondi il pulsante se il menu è aperto
+                body.classList.add('body-compressed'); // Comprimi il body
+            } else {
+                toggleBtn.style.display = 'block'; // Mostra il pulsante se il menu è chiuso
+                body.classList.remove('body-compressed'); // Ripristina il body
             }
         });
-    }
-    
-    // Handle click on carousel container
-    document.querySelector('.carousel-container').addEventListener('click', function() {
-        const activeImage = slides['slide1'][currentSlides.slide1];
-        const link = activeImage.getAttribute('data-link'); // Get link from data attribute
-        window.open(link, '_blank'); // Open link in new tab
-    });
-    
-    function moveSlide(direction, slideId) {
-        showSlide(slideId, currentSlides[slideId] + direction);
-    }
-    
-    // Show the first slide on startup
-    showSlide('slide1', currentSlides.slide1);
-    showSlide('slide2', currentSlides.slide2);
-    
-    // Prevent clicks on navigation buttons from propagating to container
-    document.querySelectorAll('.prev, .next').forEach(button => {
-        button.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent click from bubbling up to carousel container
+
+        // Funzione per chiudere la sidebar
+        closeSidebarBtn.addEventListener('click', () => {
+            sidebar.classList.add('hidden'); // Nascondi la sidebar
+            toggleBtn.style.display = 'block'; // Mostra il pulsante toggle
+            body.classList.remove('body-compressed'); // Ripristina il body
         });
-    });
     </script>
-
-
-
-
-
-<section class="mbr-section article content10 cid-uqxE1593nK custom-section" id="content10-6">
-
-
-    <footer class="footer-basic">
-        <div class="footer-content">
-            <h3 class="explore-title">| Explore |</h3>
-            <div class="social-icons">
-                <a href="https://ggd3v.itch.io" target="_blank" style="display: block; margin-bottom: 10px;">Itch.io</a>
-                <a href="https://leetcode.com/u/AndreaGitto/" target="_blank" style="display: block; margin-bottom: 10px;">LeetCode</a>
-                <a href="https://github.com/Andrea-Graziano-Gitto" target="_blank" style="display: block; margin-bottom: 10px;">GitHub</a>
-            </div>
-        </div>
-        <h3 class="explore-title">| version | 1.02 |</h3>
-            
-        </div>
-    </footer>
-    
-    
-
-  <script src="assets/web/assets/jquery/jquery.min.js"></script>
-  <script src="assets/tether/tether.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script>
-   
-// Funzione per gestire l'apertura e la chiusura del menu
-const toggleBtn = document.getElementById('toggle-btn');
-const sidebar = document.getElementById('sidebar');
-const closeSidebarBtn = document.getElementById('close-sidebar-btn');
-const body = document.body;
-
-// Funzione per controllare se lo schermo è mobile
-function isMobile() {
-    return window.innerWidth <= 768;
-}
-
-// Imposta lo stato iniziale del menu
-if (isMobile()) {
-    sidebar.classList.add('hidden'); // Chiudi il menu su mobile
-    toggleBtn.style.display = 'block'; // Mostra il pulsante su mobile
-    body.classList.remove('body-compressed'); // Non comprimere il body su mobile
-} else {
-    sidebar.classList.remove('hidden'); // Mantieni il menu aperto su desktop
-    toggleBtn.style.display = 'none'; // Nascondi il pulsante su desktop
-    body.classList.add('body-compressed'); // Comprimi il body su desktop
-}
-
-// Aggiungi l'evento click al pulsante toggle
-toggleBtn.addEventListener('click', () => {
-    sidebar.classList.toggle('hidden');
-
-    if (!sidebar.classList.contains('hidden')) {
-        toggleBtn.style.display = 'none'; // Nascondi il pulsante se il menu è aperto
-        body.classList.add('body-compressed'); // Comprimi il body
-    } else {
-        toggleBtn.style.display = 'block'; // Mostra il pulsante se il menu è chiuso
-        body.classList.remove('body-compressed'); // Ripristina il body
-    }
-});
-
-// Funzione per chiudere la sidebar
-closeSidebarBtn.addEventListener('click', () => {
-    sidebar.classList.add('hidden'); // Nascondi la sidebar
-    toggleBtn.style.display = 'block'; // Mostra il pulsante toggle
-    body.classList.remove('body-compressed'); // Ripristina il body
-});
-
-  </script>
 </body>
+
 </html>

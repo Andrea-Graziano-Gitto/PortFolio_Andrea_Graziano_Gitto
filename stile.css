@@ -1,0 +1,225 @@
+
+
+/* Force desktop styles */
+@media only screen and (max-width: 768px) {
+            body.force-desktop-mode {
+                /* Styles to mimic desktop layout */
+            }
+        }
+
+    /* Stile per comprimere il body quando il menu è aperto */
+/* Stile per comprimere il body quando il menu è aperto */
+/* Modifiche alla classe body-compressed */
+.body-compressed {
+    margin-left: 250px; /* Sposta il contenuto a destra di 250px (larghezza del menu) */
+    transition: margin-left 0.3s ease; /* Aggiunge un'animazione per una transizione fluida */
+}
+
+
+
+.custom-section {
+    background-color: #222; /* Cambia questo con il colore di sfondo desiderato */
+    color: #000000; /* Cambia questo con il colore del testo desiderato */
+    padding: 0px 0; /* Aggiungi un po' di padding per dare spazio */
+}
+.line {
+    background-color: #ffffff; /* Colore delle linee orizzontali */
+}
+
+
+/* Container for the carousel */
+.carousel-container {
+        width: calc(100% - 250px); /* Adatta la larghezza */
+        height: 700px; 
+        margin: 0 auto; 
+        position: relative; 
+        background-color: #000000; 
+        overflow: hidden; 
+        border-radius: 10px; 
+    }
+
+    @media (max-width: 768px) {
+        .carousel-container {
+            width: 100%; /* Larghezza piena su schermi piccoli */
+        }
+
+        .body-compressed {
+            margin-left: 0; /* Nessun margine su schermi piccoli */
+        }
+    }
+
+
+/* Container for the slides */
+.carousel-slide {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+    height: 100%; /* Maintain height */
+    position: relative; /* For absolute positioning of images */
+}
+
+/* Styles for the images */
+.carousel-slide img {
+    height: 100%; /* Fill the container height */
+    width: auto; /* Maintain original width */
+    opacity: 0; /* Start with all images invisible */
+    transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
+    position: absolute; /* Position images absolutely within the container */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    object-fit: contain; /* Maintain aspect ratio, scaling image as needed */
+}
+
+.carousel-slide img.active {
+    opacity: 1; /* Show the active image */
+}
+
+
+
+
+/* Navigation buttons */
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px; /* Adjust padding if needed */
+    color: white; /* Arrow color */
+    font-size: 24px; /* Increase the font size for better visibility */
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove any border */
+    z-index: 1; /* Ensure buttons are above other elements */
+}
+
+.prev {
+    left: 10px; /* Positioning */
+}
+
+.next {
+    right: 10px; /* Positioning */
+}
+
+
+    /* Stile per la barra laterale */
+    .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #151515;
+            padding-top: 20px;
+            color: #fff;
+            z-index: 1000;
+        }
+
+        .sidebar a, .sidebar button {
+            display: block;
+            padding: 10px;
+            color: white; /* Colore del testo */
+            text-decoration: none;
+            font-size: 16px;
+            margin-left: 20px; /* Allineamento */
+            border: none; /* Rimuove il bordo del pulsante */
+            background-color: #151515; /* Colore di sfondo del pulsante */
+            text-align: left; /* Allinea il testo a sinistra */
+        }
+
+        .sidebar button {
+            cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+        }
+
+        .sidebar button:hover {
+            background-color: #444; /* Colore di sfondo al passaggio del mouse */
+        }
+
+        
+
+        /* Per il pulsante toggle su desktop */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    cursor: pointer;
+    width: 25px; /* Dimensione desktop */
+    height: 20px; /* Dimensione desktop */
+}
+
+/* Per il pulsante toggle su mobile */
+@media (max-width: 768px) {
+    .toggle-btn {
+        width: 20px; /* Dimensione mobile */
+        height: 20px; /* Dimensione mobile */
+    }
+}
+
+
+
+.footer-basic {
+    background-color: #222; /* Change this to your desired background color */
+    padding: 20px 0;
+    text-align: center; /* Center-align the text */
+}
+
+.footer-content {
+    max-width: 800px; /* Optional: limit the width of the footer content */
+    margin: 0 auto; /* Center the content */
+}
+
+.explore-title {
+    color: #ffffff; /* Change text color */
+    margin-bottom: 20px; /* Increased space between title and links */
+    font-size: 0.8em; /* Decreased font size */
+}
+
+.social-icons {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items */
+    flex-wrap: wrap; /* Wrap items if necessary */
+}
+
+.social-icons a {
+    color: #ffffff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 15px; /* Space between links */
+}
+
+.social-icons a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+    /* Stile per nascondere il menu */
+    .hidden {
+      display: none;
+    }
+
+    /* Modifiche generali per il titolo */
+.mbr-section .title h2 {
+    margin-bottom: 10px; /* Riduce lo spazio sotto il titolo */
+}
+
+.mbr-section .title h3 {
+    margin-bottom: 5px; /* Riduce lo spazio sotto il sottotitolo */
+}
+
+.mbr-section .title p {
+    margin-top: -100px; /* Riduce lo spazio sopra il paragrafo */
+    margin-bottom: 0; /* Rimuove lo spazio sotto il paragrafo */
+}
+
+/* Centrare i testi, se necessario */
+.align-center {
+    text-align: center; /* Assicurati che i testi siano centrati */
+}
+.background-image {
+    background-image: url('path/to/your/image.jpg'); /* Cambia il percorso con il tuo */
+    background-size: cover; /* Assicura che l'immagine copra l'intera sezione */
+    background-position: center; /* Centra l'immagine */
+    height: 100vh; /* Imposta l'altezza della sezione */
+}
+
+
