@@ -6,7 +6,17 @@ const body = document.body;
 
 // Funzione per controllare se lo schermo è mobile
 function isMobile() {
-    return window.innerWidth <= 768;
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+    // Controlla se il dispositivo è Android, iPhone, iPad o iPod
+    if (/android/i.test(userAgent) || /iPhone|iPad|iPod/i.test(userAgent)) {
+        return true;
+    }
+
+    // Controlla se la larghezza dello schermo è quella tipica dei dispositivi mobili
+   
+
+    return false;
 }
 
 // Imposta lo stato iniziale del menu
@@ -45,6 +55,15 @@ closeSidebarBtn.addEventListener('click', () => {
     body.classList.remove('body-compressed'); // Ripristina il body
 });
 
+function downloadPDF() {
+    const downloadLink = document.createElement('a');
+    downloadLink.href = 'assets/CV - Andrea Graziano Gitto.pdf'; // Il percorso del file
+    downloadLink.download = 'CV - Andrea Graziano Gitto.pdf'; // Nome del file scaricato
+    document.body.appendChild(downloadLink); // Aggiungi il link al body
+    downloadLink.click(); // Simula il clic per scaricare
+    document.body.removeChild(downloadLink); // Rimuovi il link dal body
+}
+
 // Funzione per aprire il PDF
 function openPDF() {
     document.getElementById('pdfContainer').style.display = 'flex';
@@ -65,15 +84,16 @@ document.getElementById('pdfContainer').addEventListener('click', function (even
 // Aggiunta della logica per distinguere tra mobile e desktop per il pulsante "View CV"
 document.getElementById('viewCvBtn').addEventListener('click', function() {
     // Scarica il PDF solo al clic
-    downloadPDF();
+    if(isMobile())
+    {
+ downloadPDF();
+    }
+    else
+    {
+   openPDF();
+    }
 });
 
+
 // Funzione per far partire il download del PDF
-function downloadPDF() {
-    const downloadLink = document.createElement('a');
-    downloadLink.href = 'assets/CV - Andrea Graziano Gitto.pdf'; // Il percorso del file
-    downloadLink.download = 'CV - Andrea Graziano Gitto.pdf'; // Nome del file scaricato
-    document.body.appendChild(downloadLink); // Aggiungi il link al body
-    downloadLink.click(); // Simula il clic per scaricare
-    document.body.removeChild(downloadLink); // Rimuovi il link dal body
-}
+
