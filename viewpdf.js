@@ -64,13 +64,8 @@ document.getElementById('pdfContainer').addEventListener('click', function (even
 
 // Aggiunta della logica per distinguere tra mobile e desktop per il pulsante "View CV"
 document.getElementById('viewCvBtn').addEventListener('click', function() {
-    if (isMobile()) {
-        // Se è mobile, scarica il PDF
-        downloadPDF();
-    } else {
-        // Se è desktop, scarica il PDF
-        downloadPDF();
-    }
+    // Scarica il PDF solo al clic
+    downloadPDF();
 });
 
 // Funzione per far partire il download del PDF
