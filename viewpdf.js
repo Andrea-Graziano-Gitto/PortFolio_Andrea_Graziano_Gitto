@@ -61,3 +61,24 @@ document.getElementById('pdfContainer').addEventListener('click', function (even
         closePDF();
     }
 });
+
+// Aggiunta della logica per distinguere tra mobile e desktop per il pulsante "View CV"
+document.getElementById('viewCvBtn').addEventListener('click', function() {
+    if (isMobile()) {
+        // Se è mobile, scarica il PDF
+        downloadPDF();
+    } else {
+        // Se è desktop, scarica il PDF
+        downloadPDF();
+    }
+});
+
+// Funzione per far partire il download del PDF
+function downloadPDF() {
+    const downloadLink = document.createElement('a');
+    downloadLink.href = 'assets/CV - Andrea Graziano Gitto.pdf'; // Il percorso del file
+    downloadLink.download = 'CV - Andrea Graziano Gitto.pdf'; // Nome del file scaricato
+    document.body.appendChild(downloadLink); // Aggiungi il link al body
+    downloadLink.click(); // Simula il clic per scaricare
+    document.body.removeChild(downloadLink); // Rimuovi il link dal body
+}
