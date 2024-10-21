@@ -21,4 +21,20 @@ document.querySelectorAll('#carosello2img').forEach(function(img) {
     });
 });
 
+function handleButtonClick() {
+    // Check if the user is on a mobile device
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+        // Initiate a download for mobile users
+        const link = document.createElement('a');
+        link.href = 'https://github.com/Andrea-Graziano-Gitto/PortFolio_Andrea_Graziano_Gitto/raw/main/CV%20-%20Andrea%20Graziano%20Gitto.pdf'; // Direct download link
+        link.download = 'CV - Andrea Graziano Gitto.pdf'; // Set the file name for download
+        document.body.appendChild(link); // Append link to the body
+        link.click(); // Programmatically click the link to trigger download
+        document.body.removeChild(link); // Remove the link after download
+    } else {
+        // Redirect to the CV page for desktop users
+        window.location.href = 'CV.html';
+    }
+}
+
 

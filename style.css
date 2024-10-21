@@ -31,10 +31,15 @@ body {
         border: none; /* Nessun bordo */
         cursor: pointer; /* Cursore puntatore per hover */
     }
+
+    
 }
 /* Media query per schermi più piccoli di 1000px */
 
+
 @media screen and (max-width: 1440px) {
+
+   
     .sidebar a {
         display: flex; /* Flexbox per allineare icona e testo */
         align-items: center; /* Centro verticale */
@@ -64,6 +69,12 @@ body {
     }
 }
 
+
+
+
+/* Other CSS remains unchanged */
+
+
 /* Stili per la sidebar */
 .sidebar {
     background-color: #151515;
@@ -82,6 +93,18 @@ body {
     padding-right:0% ;
     
 }
+
+/* Interno della sidebar con transizione opacità */
+.internoSide {
+    opacity: 1; /* Imposta opacità iniziale al 100% */
+   
+}
+
+/* Riduci opacità quando la sidebar è collassata */
+.sidebar.collapsed .internoSide {
+    opacity: 0; /* Imposta opacità a 0 quando collassata */
+}
+
 
 
 .sidebar h2 {
@@ -498,10 +521,12 @@ body {
         font-size: 0.8em!important;
     }
     .custom-button1 {
-        font-size: 0.8em!important;
+        font-size: 0.9em!important;
     }
 
 }
+
+
 
 
 h1 {
