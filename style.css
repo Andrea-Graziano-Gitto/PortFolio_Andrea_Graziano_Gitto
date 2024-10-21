@@ -1,0 +1,575 @@
+/* General Styles */
+body {
+    background-color: black;
+    font-family: "Montserrat", sans-serif;
+      
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    height: 100vh; /* Set the height of the body to fill the viewport */
+    display: flex; /* Enable flexbox for the body */
+}
+
+
+
+
+
+
+
+
+
+/*------------------------- SIDERBAR -------------------------*/
+@media screen and (max-width: 768px) {
+    .btn-hidden {
+        z-index: 3;
+        position: absolute;
+       
+        height: auto;
+        top: 10px!important; /* Distanza dal bordo superiore */
+        left: 0px!important; /* Distanza dal bordo sinistro */
+        display: none; /* Nascondi per default */
+        background: none; /* Nessun background */
+        border: none; /* Nessun bordo */
+        cursor: pointer; /* Cursore puntatore per hover */
+    }
+}
+/* Media query per schermi più piccoli di 1000px */
+
+@media screen and (max-width: 1440px) {
+    .sidebar a {
+        display: flex; /* Flexbox per allineare icona e testo */
+        align-items: center; /* Centro verticale */
+        justify-content: center; /* Centro orizzontale */
+        padding: 10px; /* Padding per le icone */
+        color: white;
+        text-decoration: none;
+        font-weight: 100;
+        font-size: 0!important; /* Nascondi il testo */
+        margin-left: 0px;
+        background-color: #151515; 
+        text-align: center; /* Allinea al centro */
+        flex-wrap: nowrap; /* Non permettere di andare a capo */
+    }
+
+    .sidebar a span {
+        display: none; /* Nascondi testo */
+    }
+
+    .sidebar a:hover {
+        margin-left: 0px!important;
+     }
+    .sidebar a img {
+        width: 50px; /* Dimensione delle icone */
+        height: 50px; /* Mantieni il rapporto di aspetto */
+        margin: 0; /* Rimuovi margini per evitare il taglio */
+    }
+}
+
+/* Stili per la sidebar */
+.sidebar {
+    background-color: #151515;
+    color: white;
+    padding: 20px;
+    height: 100%; /* Estendi la sidebar per riempire l'altezza */
+    width: 13%; /* Larghezza della sidebar */
+    transition: width 0.3s; /* Transizione fluida per il ridimensionamento */
+}
+
+/* Sidebar collassata */
+.sidebar.collapsed {
+    width: 0; /* Collassa la sidebar a larghezza 0 */
+    overflow: hidden; /* Nascondi l'overflow quando è collassata */
+    padding-left:0% ;
+    padding-right:0% ;
+    
+}
+
+
+.sidebar h2 {
+    margin-bottom: 10px;
+}
+
+.sidebar a img {
+    width: 50px; /* Dimensione delle icone */
+    height: 50px; /* Mantieni il rapporto di aspetto */
+    margin: 0; /* Rimuovi margini per evitare il taglio */
+   
+}
+/* Stili per i link della sidebar */
+.sidebar a {
+    display: flex; /* Flexbox per allineare icona e testo */
+    align-items: center; /* Centro verticale */
+    padding: 10px 0; /* Padding verticale */
+    color: white; /* Colore del testo */
+    text-decoration: none; /* Rimuovi decorazione del testo */
+    font-weight: 500; /* Peso del font */
+    
+    margin-left: 0px; /* Margine a sinistra */
+    background-color: #151515; /* Colore di sfondo */
+    text-align: left; /* Allinea il testo a sinistra */
+    
+}
+
+.sidebar a:hover {
+   margin-left: 10px;
+}
+
+
+/* Stili per il pulsante */
+#toggleSidebar {
+    background: none; /* Nessuno sfondo */
+    border: none; /* Nessun bordo */
+    cursor: pointer; /* Cursore puntatore per l'effetto hover */
+    margin-left: 0px; /* Spazio tra il titolo e il pulsante */
+}
+
+#toggleSidebar img {
+    width: 50px; /* Dimensione dell'icona */
+    height: auto; /* Mantieni il rapporto di aspetto */
+    margin-left: 1px; /* Margine a sinistra */
+    justify-content: start;
+  
+}
+.topleft{
+    z-index: 3;
+    position: absolute;
+    width: 50px;
+    
+}
+/* Bottone per mostrare la sidebar */
+/* Bottone per mostrare la sidebar */
+.btn-hidden {
+    z-index: 3;
+    position: absolute;
+   
+    height: auto;
+    top: 29px; /* Distanza dal bordo superiore */
+    left: 20px; /* Distanza dal bordo sinistro */
+    display: none; /* Nascondi per default */
+    background: none; /* Nessun background */
+    border: none; /* Nessun bordo */
+    cursor: pointer; /* Cursore puntatore per hover */
+}
+
+/* Mostra il bottone quando la sidebar è collassata */
+.sidebar.collapsed + .btn-hidden {
+    display: block; /* Mostra il bottone */
+}
+
+
+
+/*------------------------- SIDERBAR -------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------- INTERMEZZI -------------------------*/
+
+/* Main Content Styles */
+.sito {
+    
+    padding: 0; /* Remove padding to eliminate lateral gaps */
+    flex: 1; /* Allow main content to grow and take available space */
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+
+/* Content Sections */
+.DigitalArt,
+.Game{
+    padding: 30px;
+    background-color: #222;
+    color :white;
+    text-align: center;
+    font-size: 1.5em;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.centrato{
+    margin-top: 12px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+
+/*------------------------- INTERMEZZI -------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------- IMMAGINE INIZIALE -------------------------*/
+
+.TopImage {
+    background-color: #000000; /* Light background for main content */
+    margin-bottom: 20px;
+    color: white;
+    padding: 0px;
+    border-radius: 0px;
+    height: 1100px;
+    width: 100%; /* Set width to 100% to avoid gaps */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    position: relative; /* Necessary to position absolute elements inside */
+}
+
+.TopImage img {
+    width: 100%;
+    z-index: 1;
+    height: 1000px;
+    object-fit: cover; /* Cover the container without stretching */
+    position: relative; /* Keep the image positioned normally but behind the text */
+}
+
+.OverZ {
+    position: absolute;
+    top: 17%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for the middle of the text */
+    z-index: 2; /* Ensure the text appears over the image */
+    color: white; /* White text for visibility */
+    text-align: center;
+}
+#titolodesc{
+    margin-left: 8px;
+    margin-top: -12px;
+    font-size: 1em;
+    font-weight: 700;
+}
+#titolo{
+    font-size: 3.8em;
+}
+
+/*------------------------- IMMAGINE INIZIALE -------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------- CAROSELLI -------------------------*/
+
+/* Imposta un'altezza fissa per il carosello */
+@media screen and (max-width: 1600px) {
+    
+   
+    
+    /* Ridimensiona le immagini per adattarsi all'altezza del carosello */
+    #carosello2img {
+        height: 100%!important; /* Altezza fissa */
+        width:100%!important; /* Larghezza determinata dall'altezza per mantenere il rapporto d'aspetto */
+        max-width: 100%; /* Assicurati che non superi il contenitore */
+        max-height: 800px; /* Assicurati che non superi il contenitore */
+        display: block; /* Evita problemi con immagini inline */
+        margin: 0 auto; /* Centra l'immagine orizzontalmente */
+    }
+}
+    #carouselExampleCaptions,
+    #carouselExampleIndicators {
+    height: 900px; /* Altezza fissa per il carosello */
+}
+
+#CaptionCaro h4{
+    font-size: 1.4em!important;
+    font-weight: 600;
+}
+#CaptionCaro p{
+   
+    font-size: 1em!important;
+}
+#CaptionCaro {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+   height: 150px;
+ 
+    background-color: rgba(0, 0, 0, 0.419); /* Sfondo nero trasparente */
+    padding: 20px;                         /* Spazio intorno al testo */
+    text-align: center;                    /* Centra il testo */
+    width: 100%;                           /* Copri l'intera larghezza del container */
+    box-sizing: border-box;                /* Assicurati che padding non influisca sulla larghezza */
+}
+
+/* Ridimensiona le immagini per adattarsi all'altezza del carosello */
+#carosello2img {
+ height: 800px; /* Altezza fissa */
+    width: auto!important; /* Larghezza determinata dall'altezza per mantenere il rapporto d'aspetto */
+    max-width: 100%; /* Assicurati che non superi il contenitore */
+    display: block; /* Evita problemi con immagini inline */
+    margin: 0 auto; /* Centra l'immagine orizzontalmente */
+   
+}
+
+.carousel-item {
+    
+    margin-bottom: -24px!important;         /* Rimuove padding */
+   
+}
+
+
+/*------------------------- CAROSELLI -------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------- ABOUT -------------------------*/
+
+/* Add this new class for the container of AboutRow and AboutDescription */
+
+
+.about-container {
+    background: linear-gradient(-135deg, #000, #222);
+    display: flex;
+    flex-wrap: wrap; /* Consente il wrapping su una nuova riga */
+    width: 100%; /* Full width */
+    justify-content: center; /* Centra gli elementi */
+    align-items: flex-start; /* Allinea gli elementi all'inizio verticalmente */
+    
+}
+
+/* Set styles for AboutRow */
+.AboutRow {
+    
+    color: white;
+    padding: 10px;
+    flex: 1 1 100%; /* Fai crescere l'elemento, ma occupa il 100% della larghezza quando si avvolge */
+    display: flex; /* Flexbox per l'interno */
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    max-width: 600px; /* Evita overflow */
+    box-sizing: border-box; /* Include padding nei calcoli di larghezza */
+}
+
+/* Set styles for the image */
+.photo {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 90%; /* Limita la dimensione dell'immagine */
+    height: 90%;
+    object-fit: contain; /* Mantieni le proporzioni */
+}
+
+/* Stili predefiniti per schermi più grandi */
+.AboutDescription {
+    margin-left: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex: 1 1 100%; /* Occupa il 100% della larghezza quando si avvolge */
+    max-width: 550px; /* Limite di larghezza per schermi grandi */
+    margin-right: 50px;
+    text-align: left; /* Testo allineato a sinistra di default */
+    box-sizing: border-box;
+}
+/* Contenitore dei bottoni */
+.button-container {
+    display: flex; /* Posiziona i bottoni in linea */
+    justify-content: left; /* Centra i bottoni all'interno del contenitore */
+    margin-top: 40px; /* Spazio sopra i bottoni */
+    margin-left: 0px;
+}
+
+/* Stili per i bottoni */
+.custom-button1 {
+    width: 160px;
+    height: 50px;
+    background-color: #0c7db5; /* Colore di sfondo */
+    color: white; /* Colore del testo */
+    padding: 10px 20px; /* Spaziatura interna del bottone */
+    margin-right:  20px; /* Spazio tra i bottoni */
+    border: none; /* Rimuovi il bordo */
+    border-radius: 0px; /* Angoli arrotondati */
+    font-size: 1.1em; /* Dimensione del testo */
+    cursor: pointer; /* Cambia il puntatore al passaggio del mouse */
+    transition: background-color 0.3s ease; /* Transizione fluida */
+}
+.custom-button2 {
+    width: 160px;
+    height: 50px;
+    background-color: #00000000; /* Colore di sfondo */
+    color: white; /* Colore del testo */
+    padding: 10px 20px; /* Spaziatura interna del bottone */
+    margin-right:  20px; /* Spazio tra i bottoni */
+    border-color: white; /* Rimuovi il bordo */
+    border-width: 3;
+    border-radius: 0px; /* Angoli arrotondati */
+    font-size: 1.1em; /* Dimensione del testo */
+    cursor: pointer; /* Cambia il puntatore al passaggio del mouse */
+    transition: background-color 0.3s ease; /* Transizione fluida */
+}
+
+/* Hover per cambiare colore al passaggio del mouse */
+.custom-button1:hover, .custom-button2:hover {
+    width: 161px;
+    height: 51px;
+}
+
+
+/* Quando lo schermo è più piccolo di 768px (ad esempio su tablet o smartphone) */
+@media screen and (max-width: 1454px) {
+    .AboutDescription {
+        margin-left: 0px;
+        margin-top: -80px;
+        margin-bottom: 100px;
+        padding-top: 10px;
+       
+        padding-bottom: 10px;
+        flex: 1 1 100%; /* Occupa il 100% della larghezza */
+        margin-right: 0; /* Elimina il margine destro */
+        text-align: center; /* Centra il testo */
+        max-width: 65%; /* Consenti che occupi l'intera larghezza */
+    }
+    .button-container {
+        display: flex; /* Posiziona i bottoni in linea */
+        justify-content: center; /* Centra i bottoni all'interno del contenitore */
+        margin-top: 40px; /* Spazio sopra i bottoni */
+        margin-left: 0px;
+    }
+}
+/* Titoli */
+@media screen and (max-width: 850px) {
+    h1 {
+        font-weight: bold !important;
+        padding-bottom: 20px;
+        padding-top: 10px;
+        font-size: 2.5em !important;
+    }
+    
+    h3 {
+        font-style: italic;
+        line-height: 1.6;
+        font-weight: 400 !important;
+        font-size: 1em !important;
+    }
+
+    .social-icons a {
+        font-size: 0.8em!important;
+        color: #ffffff; /* Link color */
+        text-decoration: none; /* Remove underline from links */
+        margin: 0 15px; /* Space between links */
+    }
+
+    .explore-title {
+        color: #ffffff; /* Change text color */
+        margin-bottom: 13px; /* Increased space between title and links */
+        font-size: 0.7em!important; /* Decreased font size */
+        font-style: normal;
+    }
+    .custom-button2 {
+        font-size: 0.8em!important;
+    }
+    .custom-button1 {
+        font-size: 0.8em!important;
+    }
+
+}
+
+
+h1 {
+    font-weight: bold;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    font-size: 3.5em;
+}
+
+h3 {
+    font-style: italic;
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+
+/*------------------------- ABOUT -------------------------*/
+
+
+
+
+
+
+
+
+
+
+/*------------------------- FOOTER -------------------------*/
+
+/* Footer Styles */
+.footer {
+    background-color: #222; /* Light background for footer */
+    color: #ffffff;
+    padding-top: 45px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+   
+    display: flex; /* Use flexbox for the footer */
+    text-align: center; /* Center-align the text */
+    justify-content: center; /* Center the text horizontally */
+    align-items: flex-end; /* Align items to the bottom */
+    margin-top: auto; /* Push footer to the bottom of the column */
+    height: 170px; /* Set a specific height for the footer */
+}
+.explore-title {
+    color: #ffffff; /* Change text color */
+    margin-bottom: 13px; /* Increased space between title and links */
+    font-size: 0.8em; /* Decreased font size */
+    font-style: normal;
+}
+
+.social-icons {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items */
+    flex-wrap: wrap; /* Wrap items if necessary */
+}
+
+.social-icons a {
+    font-size: 0.9em;
+    color: #ffffff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 15px; /* Space between links */
+}
+
+.social-icons a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+
