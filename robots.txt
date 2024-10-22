@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /CV.html
+Disallow: /images/icons.psd
+Allow: /
+
+Sitemap: https://andrea-graziano-gitto.github.io/PortFolio_Andrea_Graziano_Gitto/sitemap.xml
