@@ -10,6 +10,13 @@ body {
 }
 
 
+#linkINP {
+    color: inherit; /* Inherit color from parent */
+    font-family: inherit; /* Inherit font from parent */
+    font-weight: bold; /* Make the link bold */
+    display: inline; /* Ensure the link is inline with the text */
+    text-decoration: none; /* Remove underline from the link */
+}
 
 
 
