@@ -433,6 +433,9 @@ body {
     text-align: left; /* Testo allineato a sinistra di default */
     box-sizing: border-box;
 }
+.AboutDescription a {
+    color: #0c7db5!important; /* Cambia il colore del link */
+}
 /* Contenitore dei bottoni */
 .button-container {
     display: flex; /* Posiziona i bottoni in linea */
